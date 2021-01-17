@@ -25,7 +25,7 @@ SECRET_KEY = 'z(h8gu5qc1pzn@kb%9csf4=yzlck*vh6=br@1j0^1+oa*f(c4t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['nesting.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
