@@ -9,7 +9,7 @@ class PersonSerializer(serializers.ModelSerializer):
 class RelativeSerializer(serializers.ModelSerializer):
 	class Meta:
 		model 	= Relative
-		fields 	= ['first_name', 'last_name', 'patronymic']
+		fields 	= ['first_name', 'last_name', 'patronymic', 'kinship']
 
 class IndividualSerializer(serializers.ModelSerializer):
 	relatives = RelativeSerializer(many = True)
