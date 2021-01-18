@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'account',
+    'accounts',
+    'django_rename_app'
 ]
 
 MIDDLEWARE = [
@@ -77,12 +78,8 @@ WSGI_APPLICATION = 'candidate_test.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'de40ue8ld91m93',
-        'HOST': 'ec2-54-75-231-215.eu-west-1.compute.amazonaws.com',
-        'PORT': 5432,
-        'USER': 'reznkavrnfnzks',
-        'PASSWORD': '18093f90732fa1a584c783b114312c076149d614b0aad8700441981b8924965c'
     }
 }
 
@@ -118,7 +115,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-AUTH_USER_MODEL = 'account.Person'
+AUTH_USER_MODEL = 'accounts.Person'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
