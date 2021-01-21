@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>token authentication test</title>
+</head>
+<body>
+<table>
+	<tr>
+		<td> {{ user }}</td>
+	</tr>
+	<tr>
+		<td> {{ auth }}</td>
+	</tr>
+</table>
+<form action = '/createUser/' method="POST">
+	{% csrf_token %}
+	{% for f in form %}
+		<p>
+			<label id="{{ f.id_for_label }}">{{ f.html_name }}</label>
+			{{ f }}
+		</p>
+	{% endfor %}
+	<button type="submit">submit</button>
+</form>
+</body>
+</html>
