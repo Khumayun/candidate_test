@@ -35,3 +35,5 @@ class Relative(models.Model):
 def create_token(sender, instance, created, **kwargs):
 	if created:
 		Token.objects.create(user = instance)		#if new user was created attach a token to it
+	if not created:
+		pass #update token if something is changed
