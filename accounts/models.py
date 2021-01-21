@@ -31,4 +31,7 @@ class Relative(models.Model):
 	def __str__(self):
 		return '%d: %s' % (self.order, self.first_name)
 
-
+@receiver(post_save, sender=Person)
+def create_token(sender, instance, created, **kwargs):
+	if created:
+		Token.objects.create(user = instance)		#if new user was created attach a token to it
